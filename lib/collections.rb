@@ -1,6 +1,5 @@
 require "collections/version"
+require "collections/linear/linear"
 
-module Collections
-  class Error < StandardError; end
-  # Your code goes here...
-end
+# Root module for all data structures
+module Collections;end
