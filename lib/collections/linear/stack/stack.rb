@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 module Collections
   module Linear
-    # A stack is a data structures  where elements are added in a LIFO (Last in First Out) order
-    # It is implemented with a Ruby array
+    # A stack is a data structures  where elements are added in a LIFO
+    # (Last in First Out) order It is implemented with a Ruby array
     # @author didacusabella
     # @version 1.0
-    # @since 1.0 
+    # @since 1.0
     class Stack
       # Create a new stack with some optional elements
       # @param args [Array<Object>] lis tof elements
@@ -17,7 +19,8 @@ module Collections
       # @raise [StandardError] if the stack is empty
       # @return [Object] the top
       def top
-        raise StandardError if self.empty?
+        raise StandardError if empty?
+
         @array_stack.last
       end
 
@@ -26,14 +29,15 @@ module Collections
       # @return [Collections::Linear::Stack] the updated stack
       def push(element)
         @array_stack.push(element)
-        return self
+        self
       end
 
       # Remove the element at the top of the stack
       # @raise [StandardError] if the stack is empty
       # @return [Object] the removed element
       def pop
-        raise StandardError if self.empty?
+        raise StandardError if empty?
+
         @array_stack.pop
       end
 

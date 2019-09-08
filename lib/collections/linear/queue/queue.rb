@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Collections
   module Linear
     # The queue data structures add elements ina FIFO (first in first out) manner.
@@ -5,7 +7,6 @@ module Collections
     # @author didacusabella
     # @version 1.0
     class Queue
-
       # Create a new queue with some optional elements
       # @param args [Array<Object>] optional elements
       # @return [Collections::Linear::Queue] the created queue
@@ -24,15 +25,17 @@ module Collections
       # @raise [StandardError] if the queue is empty
       # @return [Object] the removed element
       def dequeue
-        raise StandardError if self.empty?
+        raise StandardError if empty?
+
         @queue_array.shift
       end
 
       # Get the first element in the queue
-      # @raise [StandardError] if the queue is empty 
+      # @raise [StandardError] if the queue is empty
       # @return [Object] the front element
       def front
-        raise StandardError if self.empty?
+        raise StandardError if empty?
+
         @queue_array.first
       end
 
