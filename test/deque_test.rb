@@ -44,4 +44,32 @@ class DequeTest < Minitest::Test
     deque = Collections::Linear::Deque.new(1, 2, 3, 4)
     assert_equal 4, deque.remove_last
   end
+
+  def test_last_empty
+    deque = Collections::Linear::Deque.new
+    assert_raises StandardError do
+      deque.last
+    end
+  end
+
+  def test_first_empty
+    deque = Collections::Linear::Deque.new
+    assert_raises StandardError do
+      deque.first
+    end
+  end
+
+  def test_remove_first_empty
+    deque = Collections::Linear::Deque.new
+    assert_raises StandardError do
+      deque.remove_first
+    end
+  end
+
+  def test_remove_last_empty
+    deque = Collections::Linear::Deque.new
+    assert_raises StandardError do
+      deque.remove_last
+    end
+  end
 end
